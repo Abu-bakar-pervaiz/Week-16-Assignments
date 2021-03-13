@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 21</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+    <h3 class="mt-5">
+        Write a js program to replace all occurrences of a character with another in a string.
+    </h3>
+    <br><br><br><br>
+    <form action="" class="col-8 m-auto">
+        <label for="input">Enter String</label>
+        <input type="text" id="input" class="form-control mb-3">
+        <label for="input2">Enter Character of which You want to remove All Indexes</label>
+        <input type="text" maxlength="1" id="input2" class="form-control mb-3">
+        <input type="button" value="submit" onclick="myfunction()" class="btn btn-primary btn-block">
+    </form>
+</div>
+    <script>
+        function myfunction(){
+            var string=document.getElementById('input').value
+            var removingChar=document.getElementById('input2').value
+            var index=0
+            index = string.lastIndexOf(removingChar)
+            document.write("The String Before Removing All Repeatations of Your Entered Character Is :- <br> <br> <br>" , string , " <br> <br>")
+            while( string.indexOf(removingChar)!=-1){
+                index=string.indexOf(removingChar)
+                string=string.substring(0,index)+"#"+string.substring(index+1)
+            }
+            document.write("The String After Removing All Repeatations of Your Entered Character Is :- <br> <br> <br>" , string)
+            }
+    </script>
+</body>
+
+</html>

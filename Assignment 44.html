@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 44</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h3>
+            Write a js program to right rotate an array.
+        </h3>
+    </div>
+
+    <script>
+            var array=[7,2,9,7,8,7,10,3,14,1]
+            document.write(`<br>Array (Original Array) is : >${array}<br>`)            
+            var shiftedElement=array.pop()
+            array.unshift(shiftedElement)
+            document.write(`<br>Array (Right Rotated Array) is : >${array}<br>`)            
+    </script>
+</body>
+
+</html>

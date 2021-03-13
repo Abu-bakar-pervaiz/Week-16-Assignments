@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 50</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h3>
+            Write a js program to find first and last digit of a number.
+        </h3>
+    </div>
+
+    <script>
+        var num = 9823
+        var num2=num
+        var count = 1
+        var firstDigit
+        var lastDigit
+        document.write(`<br>The Number is  ${num}`)
+        do {
+            
+            if (parseInt(num / 10) == 0) {
+                firstDigit = num
+                lastDigit = num2%10
+            }
+            num = parseInt(num / 10)
+        } while (num / 10 != 0);
+        document.write(`<br>First Digit of The Number is  ${firstDigit}`)
+        document.write(`<br>Last Digit of The Number is  ${lastDigit}`)
+    </script>
+</body>
+
+</html>

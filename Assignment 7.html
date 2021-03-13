@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+    <h3 class="mt-5">
+        Write a js program to check whether the triangle is equilateral, isosceles or scalene triangle.
+    </h3>
+    <br><br><br><br>
+<form action="" class="col-8 m-auto">
+        <label for="input">Side A</label>
+        <input type="text" id="input" class="form-control mb-3">
+        <label for="input2">Side B</label>
+        <input type="text" id="input2" class="form-control mb-3">
+        <label for="input3">Side C</label>
+        <input type="text" id="input3" class="form-control mb-3">
+        <input type="submit" onclick="myfunction()" class="btn btn-primary btn-block">
+    </form>
+</div>
+    <script>
+        function myfunction(){
+            var A=parseInt(document.getElementById('input').value)
+            var B=parseInt(document.getElementById('input2').value)
+            var C=parseInt(document.getElementById('input3').value)
+            if (A==B==C) {
+            document.writeln("It Is a Equilateral Triangle")
+            }
+            else{
+            document.writeln("It Is Not a Equilateral Triangle")
+            }
+        }
+    </script>
+</body>
+
+</html>

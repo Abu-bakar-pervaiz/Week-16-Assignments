@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 41</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h3>
+            Write a js program to sort array elements in ascending or descending order.
+        </h3>
+    </div>
+
+    <script>
+            var array=[7,2,9,7,8,7,10,3,14,1]
+            var searchElement=3
+            document.write(`<br>The Simple Array is : >${array}`)
+            array.sort(function(a, b){return a-b})
+            document.write(`<br>The Array in Ascending Order is : >${array}`)
+            array.sort(function(a, b){return b-a})
+            document.write(`<br>The Array in Descending Order is  : >${array}`)
+    </script>
+</body>
+
+</html>

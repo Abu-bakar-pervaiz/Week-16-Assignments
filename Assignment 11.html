@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 11</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+    <h3 class="mt-5">
+        Write a js program to count occurrences of a character in given string.
+    </h3>
+    <br><br><br><br>
+    <form action="" class="col-8 m-auto">
+        <label for="input">Enter String</label>
+        <input type="text" id="input" class="form-control mb-3">
+        <label for="input2">Enter Letter of which occurrences you want to Know</label>
+        <input type="text" maxlength="1" id="input2" class="form-control mb-3">
+        <input type="button" onclick="myfunction()" class="btn btn-primary btn-block">
+    </form>
+</div>
+    <script>
+        function myfunction(){
+            var string=document.getElementById('input').value
+            var letter=document.getElementById('input2').value
+            var count=0
+            for (let i = 0; i < string.length; i++) {
+                if (string[i]==letter) {
+                    count++
+                }
+
+            }
+            document.writeln(`Your Letter Repeats ${count} times`)
+        }
+    </script>
+</body>
+
+</html>

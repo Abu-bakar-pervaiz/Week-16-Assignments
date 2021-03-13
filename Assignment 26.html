@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 26</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+    <h3 class="mt-5">
+        Write a js program to Remove first occurrence of a word in a given string.
+    </h3>
+    <br><br><br><br>
+    <form action="" class="col-8 m-auto">
+        <label for="input">Enter String</label>
+        <input type="text" id="input" class="form-control mb-3">
+        <label for="input2">Enter Word of which You want to Find First Occurence</label>
+        <input type="text" id="input2" class="form-control mb-3">
+        <input type="button" value="submit" onclick="myfunction()" class="btn btn-primary btn-block">
+    </form>
+</div>
+    <script>
+        function myfunction(){
+            var string=document.getElementById('input').value
+            var removingChar=document.getElementById('input2').value
+            string=string.toLowerCase()
+            removingChar=removingChar.toLowerCase()
+            var index=string.indexOf(removingChar)
+            string=string.substring(0,index)+string.substring(index+removingChar.length)
+            document.write("The String After Removing the Word is :- <br> <br> <br>" , string)
+            
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 12</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+    <h3 class="mt-5">
+        Write a js program to find highest frequency character in a string.
+    </h3>
+    <br><br><br><br>
+    <form action="" class="col-8 m-auto">
+        <label for="input">Enter String</label>
+        <input type="text" id="input" class="form-control mb-3">
+        <input type="button" value="submit" onclick="myfunction()" class="btn btn-primary btn-block">
+    </form>
+</div>
+    <script>
+        function myfunction(){
+            var string=document.getElementById('input').value
+            var chars=[]
+            var charCount=[]
+            var maxNumsIndexes=[]
+            var charFound
+            for (let i = 0; i < string.length; i++) {
+                charFound=false
+                for (let j = 0; j < chars.length; j++) {
+                    if (chars[j]==string[i]){
+                        charFound=true
+                    }
+                }
+                if (!charFound){
+                    chars.push(string[i])
+                }
+            }
+            chars.sort();
+            for (let i = 0; i < chars.length; i++) {
+                charCount.push(0)
+                for (let j = 0; j < string.length; j++) {
+                    if (string[j]==chars[i]) {
+                        charCount[i]++
+                    }
+                }
+            }
+            var max=Math.max(...charCount)
+            console.log(max)
+            document.write("Following Character/s have the highest Frequency in the String <br> <br> <br>")
+            for (let i = 0; i < charCount.length; i++) {
+                
+                if(charCount[i]==max){
+                    document.writeln(`"${chars[i]}" Repeats ${charCount[i]} Times <br> <br>`)    
+                }
+
+            }
+            }
+    </script>
+</body>
+
+</html>

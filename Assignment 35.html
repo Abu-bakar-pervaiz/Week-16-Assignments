@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 35</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h3>Write a js program to count total number of duplicate elements in an array.</h3>
+    </div>
+
+    <script>
+            var array=[7,2,9,7,8,7,1,"Abu Bakar",0,"Abu Bakar"]
+            var chars=[]
+            var charCount=[]
+            var charFound
+            for (let i = 0; i < array.length; i++) {
+                charFound=false
+                for (let j = 0; j < chars.length; j++) {
+                    if (chars[j]==array[i]){
+                        charFound=true
+                    }
+                }
+                if (!charFound){
+                    chars.push(array[i])
+                }
+            }
+            for (let i = 0; i < chars.length; i++) {
+                charCount.push(0)
+                for (let j = 0; j < array.length; j++) {
+                    if (array[j]==chars[i]) {
+                        charCount[i]++
+                    }
+                }
+            }
+            var count=0
+            chars.forEach( (element,i )=>{
+                if(charCount[i]>1)
+                count++
+            })
+            document.write(`There are ${count} Duplicated Elements`)
+    </script>
+</body>
+
+</html>
